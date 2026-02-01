@@ -1,4 +1,5 @@
 import { OutcomeStatisticsProps } from './OutcomeStatistics.type';
+import './OutcomeStatistics.css';
 
 const OutcomeStatistics = ({children} :OutcomeStatisticsProps ) => {
     return(

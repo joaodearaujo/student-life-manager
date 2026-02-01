@@ -5,6 +5,10 @@
     background-color: transparent;
 }
 
+*{
+    letter-spacing: 0.05em;
+}
+
 .header__text-area {
     display: flex;
     flex-direction: column;
@@ -29,26 +33,25 @@
 }
 
 .header__title {
-    font-size: 4.3rem;
-    letter-spacing: 0.02em;
-    color: var(--tt-header);
+    font-size: 6rem;
+    font-weight: 600;
+    color: var(--txt-primary);
 }
 
 .header__subtitle {
-    letter-spacing: 0.02em;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     font-weight: 300;
-    color: var(--st-header);
+    color: var(--txt-secondary);
 }
 
 .header__user-name {
     font-size: 1.4rem;
-    color: var(--tt-header);
+    color: var(--txt-primary);
 }
 
 .header__user-role {
     font-size: 1.4rem;
     font-weight: 300;
-    color: var(--st-header);
+    color: var(--txt-secondary);
 }
 

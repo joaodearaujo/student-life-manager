@@ -1,11 +1,17 @@
 :root {
     --bg-background: #F0F0F0;
     --bg-main-card: #FFF;
-    --tt-header: #000;
-    --st-header:#AEAEAE;
+
+    --txt-primary: #363636;
+    --txt-secondary: #9e9e9e;
+ 
+
     --link-sidebar: #C7C7C7;
 
-    --bd-radius: 5.5rem;
+;
+
+    --bd-radius: 3.5rem;
+    --bx-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     
     --space-xs: 0.4rem;  
     --space-sm: 0.8rem;  

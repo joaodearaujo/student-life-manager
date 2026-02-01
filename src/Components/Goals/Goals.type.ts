@@ -1,6 +1,9 @@
 import { ReactNode } from "react";
 
 export interface GoalsProps {
-    money: number;
+    id: number;
+    cost: string;
     date: string; 
+    img: string;
+    name: string;
 }

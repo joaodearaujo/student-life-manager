@@ -1,21 +1,20 @@
 .main-container {
+   height: 100%;
    width: 100%;
-   display: grid;
+   display: flex;
    gap: var(--space-xl);
-   
-   grid-template-columns: 1.3fr 1fr;
-   grid-template-rows: repeat(6, 1fr); 
-   grid-template-areas: 
-       "cd gl"
-       "cd gl"
-       "cd nt"
-       "th nt"
-       "th oc"
-       "th oc";
 }
 
-.cards-container { grid-area: cd; }
-.th-container    { grid-area: th; }    
-.goals-container { grid-area: gl; }
-.os-container    { grid-area: oc; }
-.nt-container    { grid-area: nt; }
+.main__left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.main__right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}   

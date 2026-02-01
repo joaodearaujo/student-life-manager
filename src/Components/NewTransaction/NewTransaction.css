@@ -1,0 +1,8 @@
+.nt-container {
+   height: 33%;
+   padding: 0 var(--space-2xl); 
+   gap: var(--space-lg);
+   border-radius: var(--bd-radius);
+   background-color: var(--bg-main-card);
+   box-shadow: var(--bx-shadow);
+}

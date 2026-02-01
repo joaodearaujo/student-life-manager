@@ -1,0 +1,14 @@
+.cards-container {
+   height: 60%;
+   padding: var(--space-md); 
+   gap: var(--space-lg);
+   border-radius: var(--bd-radius);
+   background-color: var(--bg-main-card);
+   box-shadow: var(--bx-shadow);
+}
+
+.cards__title {
+    font-size: 2.4em;
+    color: var(--txt-primary);
+    font-weight: 600;
+}

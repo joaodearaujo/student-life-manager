@@ -1,0 +1,6 @@
+.os-container {
+   height: 33%;
+   padding: var(--space-md); 
+   gap: var(--space-lg);
+   background-color: transparent;
+}

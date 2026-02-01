@@ -1,5 +1,4 @@
 import './App.css'
-import Background from './Components/Background/Background';
 import MainCard from './Components/MainCard/MainCard';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Header from './Components/Header/Header';
@@ -14,13 +13,11 @@ import NewTransaction from "./Components/NewTransaction/NewTransaction";
 
 function App() {
   return (
-    <Background>
       <MainCard>
         <Sidebar/>
         <Header user={MOCK_USER}></Header>
         <Main/>
       </MainCard>
-    </Background>
   )
 }
 

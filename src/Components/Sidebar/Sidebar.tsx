@@ -3,11 +3,12 @@ import './Sidebar.css';
 
 const SidebarItem = ({name, img} : SidebarItemsProps ) => {
 
-    return (
-        <div className="item-container">
-            <img src={`${img}`} alt="Item icon" className="item__icon" />
-            <a href="#" className="item__link">{name}</a>    
-        </div>
+    return (       
+            <a href="#" className="item__link">
+                <img src={`${img}`} alt="Item icon" className="item__icon" />
+                <p className="item-name">{name}</p>
+            </a>    
+
     )
 }
 
@@ -28,7 +29,7 @@ const Sidebar = () => {
 
             <img src="./public/cloud-cash.png" alt="Sidebar Icon" className="sidebar__icon" />
 
-            <div className="sidebar__links-card">
+            <div className="sidebar__links-container">
                 {SidebarItems.map((item, index) => (
                     <SidebarItem
                         key={index}
