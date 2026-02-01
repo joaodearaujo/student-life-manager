@@ -1,8 +1,9 @@
 .main-container {
    width: 100%;
    display: grid;
+   gap: var(--space-xl);
    
-   grid-template-columns: 1fr 1fr; 
+   grid-template-columns: 1.3fr 1fr;
    grid-template-rows: repeat(6, 1fr); 
    grid-template-areas: 
        "cd gl"
@@ -11,8 +12,6 @@
        "th nt"
        "th oc"
        "th oc";
-
-   gap: 2rem;
 }
 
 .cards-container { grid-area: cd; }
