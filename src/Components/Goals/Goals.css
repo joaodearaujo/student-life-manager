@@ -3,6 +3,7 @@
 }
 
 .goals-container{
+    height: 33%;
     display : flex;
     flex-direction: column;
     gap: var(--space-xs);
@@ -25,8 +26,8 @@
 }
 
 .goals__add-goal {
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
     border-radius: 50%;
     cursor: pointer;
     background-color: #fec146;
@@ -44,22 +45,21 @@
     background-color: #f7a429;
 }
 .goals__add-goal p {
-    line-height: 1;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 400;
 }
 
 .goals__card-container {
     width: 100%;
     display: flex;
-    gap: var(--space-lg);
+    gap: var(--space-sm);
     align-items: center;
     justify-content: space-between;
 }  
 
 .goals__card {
-    width: 20em;
+    width: 15em;
     min-height: 100%;
     display: flex;
     flex-direction: column;

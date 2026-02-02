@@ -40,13 +40,19 @@ const Goals = () => {
         img: './public/profile-image.png',
         name: 'Xbox',
         },
+        {
+        id: 1,
+        cost: '820',
+        date: '12/20/20',
+        img: './public/profile-image.png',
+        name: 'Xbox',
+        },
     ]
     
     return(
         <div className="goals-container">
             <div className="goals__header">
                 <h1 className="goals__title">Goals</h1>
-                <button className="goals__add-goal"><p>+</p></button>
             </div>
             <div className="goals__card-container">
                 {goals.map((goal, key) => (

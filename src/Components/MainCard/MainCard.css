@@ -1,7 +1,7 @@
  .main-card {
    width: 100vw;
    height: 100vh;
-   padding: var(--space-lg); 
+   padding: var(--space-2xl); 
    gap: var(--space-2xl);
 
    background-color: var(--bg-main-card);
