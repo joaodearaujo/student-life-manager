@@ -6,18 +6,18 @@ const CreditCard = ({bankName, cardNumber, typeCard, name, expirationDate, color
     return (
         <div className="credit-card" style={{backgroundColor:`${color}`}}>
             <div className="credit-card__header"> 
-                <h1 className="credit-card__brand">{bankName}</h1>
-                <p className="credit-card__type">{typeCard}</p>
+                <h1 className="credit-card__brand">{bankName ?? 'Bank'}</h1>
+                <p className="credit-card__type">{typeCard ?? 'Modalite'}</p>
             </div>
-            <p className="credit-card__number">{cardNumber}</p>
+            <p className="credit-card__number">{cardNumber ?? '**** **** **** ****'}</p>
             <div className="credit-card__info">
                 <div className="credit-card__group"> 
                     <p className="credit-card__label">Card holder</p>
-                    <p className="credit-card__value">{name}</p>
+                    <p className="credit-card__value">{name ?? 'Owner'}</p>
                 </div>
                 <div className="credit-card__group">
                     <p className="credit-card__label">Expiration date</p>
-                    <p className="credit-card__value">{expirationDate}</p>
+                    <p className="credit-card__value">{expirationDate ?? '0/0'}</p>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@ const CardLimit = ({weeklyLimit, weeklyUsed} : UserCard ) => {
             </div>
             <div className="card-limit__info">
                 <p className="card-limit__label">Weekly payment limit</p>
-                <p className="card-limit__value">{`$${weeklyUsed} / $${weeklyLimit}`}</p>
+                <p className="card-limit__value">{`$${weeklyUsed ?? '0'} / $${weeklyLimit ?? '0'}`}</p>
             </div>
         </div>
     )
@@ -45,15 +45,15 @@ const BalanceSummary = ({currentBalance, income, outcome} : UserCard) => {
     return (
         <div className="balance-summary">
             <div className="balance-summary__item">
-                <p className="balance-summary__amount balance-summary__amount--primary">{`$${currentBalance}`}</p>
+                <p className="balance-summary__amount balance-summary__amount--primary">{`$${currentBalance ?? '0'}`}</p>
                 <p className="balance-summary__label">Current Balance</p>
             </div>
             <div className="balance-summary__item">
-                <p className="balance-summary__amount balance-summary__amount--income">{`$${income}`}</p>
+                <p className="balance-summary__amount balance-summary__amount--income">{`$${income ?? '0'}`}</p>
                 <p className="balance-summary__label">Income</p>
             </div>
             <div className="balance-summary__item">
-                <p className="balance-summary__amount balance-summary__amount--outcome">{`$${outcome}`}</p>
+                <p className="balance-summary__amount balance-summary__amount--outcome">{`$${outcome ?? '0'}`}</p>
                 <p className="balance-summary__label">Outcome</p>
             </div>
         </div>
@@ -68,7 +68,7 @@ const Cards = (MOCK_CARDS : UserCard ) => {
     const prevIndex = () => setCurrentIndex((prev) => (prev - 1 + userCards.length) % userCards.length);
     
     const userCards: UserCard[] =[ 
-        {
+     {
         bankName: 'Nubank',
         typeCard: 'credit',
         cardNumber: '5105 **** **** 4567',
@@ -86,10 +86,10 @@ const Cards = (MOCK_CARDS : UserCard ) => {
         typeCard: 'debit',
         cardNumber: '4532 **** **** 1289',
         name: 'João Pedro Araújo',
-        expirationDate: '11/29',
+        expirationDate: '11/29',    
         weeklyLimit: 2500,
         weeklyUsed: 450.0,
-        currentBalance: 12450.75,
+        currentBalance: 23945.75,
         income: 5000.00,
         outcome: 1200.00,
         color: '#FF7A00'
@@ -132,7 +132,7 @@ const Cards = (MOCK_CARDS : UserCard ) => {
         income: 0.00,
         outcome: 150.00,
         color: '#117ACA'
-    }
+    }   
     ]
 
     const currentCard = userCards[currentIndex];
