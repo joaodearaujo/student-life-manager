@@ -1,14 +1,121 @@
 import './TransactionHistory.css'
 import { historyInfoProps } from "./TransactionHistory.type"
 
+const historyInfo = [
+  {
+    "id": 1,
+    "receiver": "Tesco Supermarket",
+    "type": "Groceries",
+    "date": "01 Feb 2026",
+    "amount": 145.20,
+    "icon": "/grocery-store.png"
+  },
+  {
+    "id": 2,
+    "receiver": "Five Guys Burgers",
+    "type": "Fast Food",
+    "date": "02 Feb 2026",
+    "amount": 32.50,
+    "icon": "/fast-food.png"
+  },
+  {
+    "id": 3,
+    "receiver": "Uber Eats Delivery",
+    "type": "Delivery",
+    "date": "02 Feb 2026",
+    "amount": 12.90,
+    "icon": "/fast-delivery.png"
+  },
+  {
+    "id": 4,
+    "receiver": "John Doe (Transfer)",
+    "type": "Personal",
+    "date": "03 Feb 2026",
+    "amount": 500.00,
+    "icon": "/user.png"
+  },
+  {
+    "id": 5,
+    "receiver": "Whole Foods Market",
+    "type": "Groceries",
+    "date": "04 Feb 2026",
+    "amount": 89.99,
+    "icon": "/grocery-store.png"
+  },
+  {
+    "id": 6,
+    "receiver": "Pizza Hut",
+    "type": "Fast Food",
+    "date": "04 Feb 2026",
+    "amount": 25.00,
+    "icon": "/fast-food.png"
+  },
+  {
+    "id": 7,
+    "receiver": "DHL Express Shipping",
+    "type": "Delivery",
+    "date": "05 Feb 2026",
+    "amount": 45.15,
+    "icon": "/fast-delivery.png"
+  },
+  {
+    "id": 8,
+    "receiver": "Alice Smith",
+    "type": "Personal",
+    "date": "05 Feb 2026",
+    "amount": 150.00,
+    "icon": "/user.png"
+  },
+  {
+    "id": 9,
+    "receiver": "Walmart",
+    "type": "Groceries",
+    "date": "06 Feb 2026",
+    "amount": 210.30,
+    "icon": "/grocery-store.png"
+  },
+  {
+    "id": 10,
+    "receiver": "KFC",
+    "type": "Fast Food",
+    "date": "06 Feb 2026",
+    "amount": 18.75,
+    "icon": "/fast-food.png"
+  },
+  {
+    "id": 11,
+    "receiver": "DoorDash",
+    "type": "Delivery",
+    "date": "06 Feb 2026",
+    "amount": 6.00,
+    "icon": "/fast-delivery.png"
+  },
+  {
+    "id": 12,
+    "receiver": "Gym Instructor",
+    "type": "Personal",
+    "date": "06 Feb 2026",
+    "amount": 80.00,
+    "icon": "/user.png"
+  }
+];
 const HistoryTable = (historyInfo : historyInfoProps) => {
     return (
-        <tbody className="transaction-history__body">
-                <tr className="transaction-history__row">
-                    <td className="transaction-history__cell transaction-history__cell--receiver"><img src={`${historyInfo.icon}`} alt="" className="transaction-history__icon"/>{historyInfo.receiver}</td>
-                    <td className="transaction-history__cell transaction-history__cell--type">{historyInfo.type}</td>
-                    <td className="transaction-history__cell transaction-history__cell--date">{historyInfo.date}</td>
-                    <td className="transaction-history__cell transaction-history__cell--amount">${historyInfo.amount}</td>
+        <tbody className="history__body">
+                <tr className="history__row">
+                    <td className="history__cell history__cell--receiver">
+                            <span>
+                        <div className="history__image-background">
+                            <img src={`${historyInfo.icon}`} 
+                                 alt="" 
+                                 className="history__icon"/>
+                        </div>
+                            {historyInfo.receiver}
+                            </span>
+                    </td>
+                    <td className="history__cell history__cell--type">{historyInfo.type}</td>
+                    <td className="history__cell history__cell--date">{historyInfo.date}</td>
+                    <td className="history__cell history__cell--amount">${historyInfo.amount}</td>
                 </tr>
         </tbody>
     )
@@ -16,221 +123,10 @@ const HistoryTable = (historyInfo : historyInfoProps) => {
 
 const TransactionHistory = () => {
 
-    const historyInfo = [
-        {
-            id: 1,
-            receiver: "Tesco Market",
-            type: "Shopping",
-            date: "13 Dec 2020",
-            amount: 75.67,
-            icon: "shopping-cart-icon.png"
-        },
-        {
-            id: 2,
-            receiver: "ElectroMen Market",
-            type: "Shopping",
-            date: "14 Dec 2020",
-            amount: 250.00,
-            icon: "shopping-cart-icon.png"
-        },
-        {
-            id: 3,
-            receiver: "Fiorgio Restaurant",
-            type: "Food",
-            date: "07 Dec 2020",
-            amount: 19.50,
-            icon: "restaurant-icon.png"
-        },
-        {
-            id: 4,
-            receiver: "John Mathew Kayne",
-            type: "Sport",
-            date: "06 Dec 2020",
-            amount: 350.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 1,
-            receiver: "Tesco Market",
-            type: "Shopping",
-            date: "13 Dec 2020",
-            amount: 75.67,
-            icon: "shopping-cart-icon.png"
-        },
-        {
-            id: 2,
-            receiver: "ElectroMen Market",
-            type: "Shopping",
-            date: "14 Dec 2020",
-            amount: 250.00,
-            icon: "shopping-cart-icon.png"
-        },
-        {
-            id: 3,
-            receiver: "Fiorgio Restaurant",
-            type: "Food",
-            date: "07 Dec 2020",
-            amount: 19.50,
-            icon: "restaurant-icon.png"
-        },
-        {
-            id: 4,
-            receiver: "John Mathew Kayne",
-            type: "Sport",
-            date: "06 Dec 2020",
-            amount: 350.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-        {
-            id: 5,
-            receiver: "Ann Marlin",
-            type: "Shopping",
-            date: "31 Nov 2020",
-            amount: 430.00,
-            icon: "user-icon.png"
-        },
-    ]
-
     return(
         <div className="transaction-history">
             <h1 className="transaction-history__title">Transaction History</h1>
-            <div className="transiction-history__table-container">
+            <div className="transaction-history__table-container">
                 <table className="transaction-history__table">
                     <thead className="transaction-history__head">
                         <th className="transaction-history__header transaction-history__header--receiver">Receiver</th>

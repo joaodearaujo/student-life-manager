@@ -1,6 +1,6 @@
 .transaction-history {
    width: 100%;
-   height: 40%;
+   height: 45%;
    min-width: 0;
    min-height: 0;
    display: flex;
@@ -19,9 +19,7 @@
    margin-bottom: var(--space-xs);
 }
 
-.transiction-history__table-container {
-   position: relative;
-   padding: 0;
+.transaction-history__table-container {
    width: 100%;
    height: 100%;
    min-width: 0;
@@ -30,70 +28,92 @@
    scroll-behavior: smooth;
 }
 
+
 .transaction-history__table {
    table-layout: fixed;
-   padding: 0;
+   border-collapse: collapse; /* Faz com que linhas e colunas compartilhem a mesma borda, caso a opção seje separate, haverá um border-spacing entre ta linhas e colunas.*/
    width: 100%;
+   height: 100%;
+   padding: 0;
 }
 
 .transaction-history__head {
-   margin:0;
    width: 100%;
-   position: sticky;
+   position: sticky; /*  Diferente de fixed faz como que o elemento fique fixo em relação ao Pai e não à página.*/
    top: 0;
    z-index: 10;
 }
 
 .transaction-history__header {
+   letter-spacing: 0.2px;
    background: var(--bg-main-card);
    font-size: 1.8rem;
-   font-weight: 400;
+   font-weight: 300;
    padding: var(--space-sm);
-   text-align: start;
    color: var(--txt-secondary);
    text-align: left;
    vertical-align: middle;
-   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }  
 
-.transaction-history__cell {
+.history__cell {
    color: var(--txt-secondary);
-   width: 25%;
-   min-width: 0;
    font-size: 1.8rem;
-   padding: var(--space-md) 0;
+   font-weight: 200;
    vertical-align: middle;
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+   padding: var(--space-lg) 0;
+   white-space: nowrap; 
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.transaction-history__cell--amount {
+.history__cell--amount {
    font-weight: 600;
 }
 
-.transaction-history__cell--receiver, .transaction-history__cell--amount {
+.history__cell--receiver {
+   align-items: center;
+   font-weight: 400;
+}
+
+.history__cell--receiver span {
+   display: flex;
+   align-items: center;
+   gap: var(--space-md);
+}
+
+.history__cell--receiver, .history__cell--amount {
    color: var(--txt-primary);
    padding-left: var(--space-sm);
 }
 
-.transaction-history_cell--receiver, .transaction-history__header:first-child {
-   width: 40%;
+.history__cell--receiver, .transaction-history__header:first-child {
+   width: 35%;
    text-align: left;
    padding-left: var(--space-sm);
-}
-
-
-s
-.transaction-history__cell--type, .transaction-history__cell--date {
+}  
+   
+.history__cell--type, .history__cell--date {
    text-align: left;
    padding-left: var(--space-sm);
    width: 20%;
-}
+}  
 
-.transaction-history__header--amount, .transaction-history__cell--amount {
+.transaction-history__header--amount, .history__cell--amount {
    width: 20%;
    text-align: right;
    padding-right: var(--space-sm);
+}
+
+.history__image-background {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 3rem;
+   height: 3rem;
+   border-radius: 5px;
+   background-color: #efefef;
+}
+
+.history__icon {
+   width: 1.8rem;
+   height: 1.8rem;
 }
